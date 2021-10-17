@@ -19,8 +19,8 @@ class Home_C extends Controller
             'sts' => 'home'
         ];
         $data = [
-            'title' => 'Laravel',
-            'body' => 'Laravel adalah kerangka kerja aplikasi web berbasis PHP yang sumber terbuka, menggunakan konsep Model-View-Controller (MVC). Laravel berada dibawah lisensi MIT, dengan menggunakan GitHub sebagai tempat berbagi kode. Laravel diluncurkan sejak tahun 2011 dan mengalami pertumbuhan yang cukup eksponensial. Di tahun 2015, Laravel adalah framework yang paling banyak mendapatkan bintang di Github. Sekarang framework ini menjadi salah satu yang populer di dunia, tidak memulai di Indonesia.',
+            'title' => $home[0]->title,
+            'body' => $home[0]->content,
             'foot' => 'Read More',
             'img' => $home[0]->image
         ];
@@ -95,8 +95,8 @@ class Home_C extends Controller
     {
         $home = DB::table('homes')->where('status', 1)->get();
         $data = [
-            'title' => 'Home',
-            'body' => 'Laravel adalah kerangka kerja aplikasi web berbasis PHP yang sumber terbuka, menggunakan konsep Model-View-Controller (MVC). Laravel berada dibawah lisensi MIT, dengan menggunakan GitHub sebagai tempat berbagi kode. Laravel diluncurkan sejak tahun 2011 dan mengalami pertumbuhan yang cukup eksponensial. Di tahun 2015, Laravel adalah framework yang paling banyak mendapatkan bintang di Github. Sekarang framework ini menjadi salah satu yang populer di dunia, tidak memulai di Indonesia.',
+            'title' => $home[0]->title,
+            'body' => $home[0]->content,
             'foot' => 'Read More',
             'img' => $home[0]->image
         ];
